@@ -15,12 +15,12 @@ $pdo = new PDO($dsn, 'root', '002574100');
 <body>
 <?php
 $db = $pdo->query('SELECT * FROM `users`');
-$dataUsers = $db->fetchAll(PDO::FETCH_ASSOC);
+$data_users = $db->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <h2>База пользователей</h2>
 <?php
-foreach ($dataUsers as $key => $value) {
+foreach ($data_users as $key => $value) {
         echo '<br>';
     foreach ($value as $k => $v) {
         echo $k . ' : '  .$v . '<br>';
@@ -29,11 +29,11 @@ foreach ($dataUsers as $key => $value) {
 ?>
 <?php
 $db = $pdo->query('SELECT * FROM `orders`');
-$dataOrders = $db->fetchAll(PDO::FETCH_ASSOC);
+$data_orders = $db->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <h2>База заказов</h2>
 <?php
-foreach ($dataOrders as $key => $value) {
+foreach ($data_orders as $key => $value) {
     echo '<br>';
     foreach ($value as $k => $v) {
         echo $k . ' : '  .$v . '<br>';

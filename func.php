@@ -61,13 +61,13 @@ function send_email($order_id, $number_orders, $pdo)
     } else {
         $count_order = "Спасибо! Это уже $number_orders заказ!";
     }
-    echo $orderMessage = $title . $time . $text;
+    echo $order_message = $title . $time . $text;
     echo "ул." . $address_orders['street'] . ", дом " . $address_orders['home'] . ", корпус " . $address_orders['part'] . ", квартира " . $address_orders['appt'] . ", этаж " . $address_orders['floor'] . "<br/>";
     echo $count_order;
 // Записываем в файл
-    $writeOrder = file_get_contents($file);
-    $writeOrder .= $orderMessage;
-    file_put_contents($file, $writeOrder);
+    $write_order = file_get_contents($file);
+    $write_order .= $order_message;
+    file_put_contents($file, $write_order);
 }
 
 
