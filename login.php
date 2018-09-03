@@ -1,8 +1,8 @@
 <?php
+global $pdo;
 $dsn = 'mysql:host=127.0.0.1;dbname=burgers;charset=utf8';
 $pdo = new PDO($dsn, 'root', '002574100');
-//$db = new PDO('mysql:host=127.0.0.1', 'root', '002574100');
-return $pdo;
+
 
 /*$db_host = "127.0.0.1";
 $db_username = "root";
